@@ -15,10 +15,9 @@ def a_power_n_recursive(a, n):
     if n == 0:
         return 1
     else:
-        prod = a * a_power_n_recursive(a, n-1)
-    return prod
+        return a * a_power_n_recursive(a, n-1)
 
-
+    
 def main():
     a = 99
     x = []
