@@ -17,31 +17,31 @@ def a_power_n_recursive(a, n):
     else:
         return a * a_power_n_recursive(a, n-1)
 
-    
+
 def main():
     a = 99
     x = []
 
-    for i in range(1, 11):
+    for i in range(1, 101):
         x.append(i)
 
     time_simple = []
     time_recursive = []
 
-    for n in range(1, 11):
+    for n in range(1, 101):
         start = time.time()
         a_power_n(a, n)
         end = time.time()
         time_simple.append(end-start)
 
-    for n in range(1, 11):
+    for n in range(1, 101):
         start = time.time()
         a_power_n_recursive(a, n)
         end = time.time()
         time_recursive.append(end-start)
   
     plot.plot(x, time_recursive, 'ro', x, time_simple, 'bo')
-    plot.axis([0, 10, 0, 0.000005])
+    plot.axis([0, 100, 0, 0.00001])
     plot.xlabel("exponent n")
     plot.ylabel("time")
     plot.show()
