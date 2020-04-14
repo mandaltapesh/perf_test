@@ -1,9 +1,14 @@
+import matplotlib.pyplot as plot
 import time
-import matplotlib.pyplot as plot 
 
 
 def a_power_n(a, n):
-
+    """
+    Function to calculate the a^n using for loop.
+    :param a: base, int
+    :param n: exponent, int
+    :return: prod, int
+    """
     prod = 1
     for i in range(1, n+1):
         prod *= a
@@ -11,7 +16,12 @@ def a_power_n(a, n):
 
 
 def a_power_n_recursive(a, n):
-
+    """
+    Function to calculate the a^n using recursion.
+    :param a: base, int
+    :param n: exponent, int
+    :return: int
+    """
     if n == 0:
         return 1
     else:
@@ -19,6 +29,7 @@ def a_power_n_recursive(a, n):
 
 
 def main():
+    """ Main function """
     a = 99
     x = []
 
